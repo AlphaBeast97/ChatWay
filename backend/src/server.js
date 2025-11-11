@@ -7,10 +7,11 @@ import { connectDB } from "../lib/db.js";
 const app = express();
 
 dotenv.config();
-app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI = process.env.MONGODB_URI;
+
+app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 
