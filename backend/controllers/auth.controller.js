@@ -102,3 +102,14 @@ export const logout = (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 };
+
+export const updateProfile = async (req, res) => {
+  const { fullName, profilePic } = req.body;
+  try {
+    const userId = req.user._id;
+    
+  } catch (error) {
+    console.log("Error in updateProfile controller:", error.message);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
